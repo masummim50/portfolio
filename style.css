@@ -31,3 +31,11 @@ h2{
   padding:5px 15px;
   border-radius: 5px;
 }
+.bottom-banner{
+  background-image: url("images/dream-bg.png");
+  background-repeat: no-repeat;
+  background-position: right;
+}
+.half-width .second-content{
+  margin-left:0;
+}
