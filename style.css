@@ -4,6 +4,7 @@ body{
 }
 section{
   height: 500px;
+  padding-bottom:150px;
 }
 h2{
   font-size: 50px;
@@ -38,4 +39,35 @@ h2{
 }
 .half-width .second-content{
   margin-left:0;
+}
+.experience-area{
+  height:700px;
+}
+.experience{
+  background-image: linear-gradient(90deg, orange, transparent);
+  padding:5px 0;
+  color:white;
+}
+.single-experience{
+  height: 80%;
+  box-shadow: 10px 10px 40px gray;
+  border-radius:5px;
+  padding:1%;
+}
+.experience-area{
+  background-image: url(images/exp-bg.png);
+  background-repeat: no-repeat;
+  background-position:left;
+}
+#left-line{
+  border-left:10px solid purple;
+}
+#right-line{
+  border-left:10px solid orange;
+}
+footer{
+  background-image: linear-gradient(90deg, transparent, purple, transparent);
+  color:white;
+  text-align:center;
+  padding:15px 0;
 }
