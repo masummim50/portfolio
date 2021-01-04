@@ -1,4 +1,33 @@
-
+body{
+  margin:0;
+  font-family: 'Poppins', sans-serif;
+}
+section{
+  height: 500px;
+}
 h2{
   font-size: 50px;
+}
+.red{
+  color:orange;
+}
+.half-width{
+  width:40%;
+  margin-left:5%;
+  float:left;
+}
+.half-width img{
+  width:100%;
+}
+.top-banner{
+  background-image: url("images/top-banner.png");
+  background-repeat: no-repeat;
+}
+.hire-button{
+  text-decoration: none;
+  font-weight:bold;
+  color:white;
+  background-image: linear-gradient(90deg, lightsalmon, tomato);
+  padding:5px 15px;
+  border-radius: 5px;
 }
