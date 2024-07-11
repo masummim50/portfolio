@@ -19,7 +19,7 @@ const links = [
 const NewHeader = () => {
   return (
     <div className=" p-2 w-full fixed top-0 backdrop-blur-md z-[1000]">
-      <ul className="flex justify-start sm:justify-end bg-orange-400">
+      <ul className="flex justify-start sm:justify-end">
         {links.map((link, i) => {
           return (
             <li key={i} className="inline-block gap-1 sm:mr-1 mr-0 ml-1 sm:ml-0">
