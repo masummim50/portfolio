@@ -1,6 +1,23 @@
 import React from "react";
 import { FaDownload } from "react-icons/fa";
 
+
+const services = [
+  {
+    title: "FrontEnd Development",
+    description: "I can develop fully responsive landing page with custom or tailwindcss or any css library. I can integrate provided api in the frontend to create read and update data."
+  },
+  {
+    title: "Rest Api Development",
+    description: "I can build fully functional rest api with authentication using tools such as nodejs, express, mongodb, jwt, mongoose etc."
+  },
+  {
+    title: "Full stack Development",
+    description: "I can develop fully functional web application with both backend and frontend. See my projects for examples."
+  },
+]
+
+
 const AboutMePage = () => {
   return (
     <div className="pb-5">
@@ -18,10 +35,9 @@ const AboutMePage = () => {
             dynamic and a fully functional website. <br />
             <br />
             I am able to do front end work such as PSD to HTML, Sketch to html
-            with proper responsiveness. <br />
+            with proper responsiveness. Backend work such as developing a fully functional rest api to fetch create or update data from database.<br />
             <br />
-            Focused on responsive design to improve user experience. Able to
-            pick up new related technology and use them for my work.
+            I love learning new technology and can pick up new related technology fast and use them for my work.
           </p>
         </div>
         <div className="w-[100%] md:w-[30%]">
@@ -30,10 +46,6 @@ const AboutMePage = () => {
             <span className="text-cyan-400">Name: </span>Md. Masum Billah
           </p>
           
-          <p>
-            <span className="text-cyan-400">Address: </span>Jessore, Khulna,
-            Bangladesh
-          </p>
           <p>
             <span className="text-cyan-400">Email: </span>masummim50@gmail.com
           </p>
@@ -54,17 +66,20 @@ const AboutMePage = () => {
       </div>
       <h3 className="text-center text-cyan-500 text-5xl mt-5">Services</h3>
       <div className="flex flex-wrap md:flex-nowrap gap-2 mt-5 text-center mb-5">
-        <div className="w-[100%] md:w-[33%] bg-cyan-100/10 transition-all ease-linear cursor-pointer hover:bg-cyan-500 p-4 rounded-md">
+        {
+          services.map((service, i) => (
+            <div key={i} className="w-[100%] md:w-[33%] bg-cyan-100/10 transition-all ease-linear cursor-pointer hover:bg-cyan-500 p-4 rounded-md group">
           <div className="service-box">
-            icon
-            <h4>Web Development</h4>
+            <h4 className="text-2xl text-cyan-400 mb-4 group-hover:text-black">{service.title}</h4>
             <p>
-              I can build functional dynamic and single page application
-              with google authentication and database operations
+              {service.description}
             </p>
-          </div>
+          </div> 
         </div>
-        <div className="w-[100%] md:w-[33%] bg-cyan-100/10 transition-all ease-linear cursor-pointer hover:bg-cyan-500 p-4 rounded-md">
+          ))
+        }
+        
+        {/* <div className="w-[100%] md:w-[33%] bg-cyan-100/10 transition-all ease-linear cursor-pointer hover:bg-cyan-500 p-4 rounded-md">
           <div className="service-box">
             icon
             <h4>Web Design</h4>
@@ -83,7 +98,7 @@ const AboutMePage = () => {
               satisfaction of users with various devices
             </p>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

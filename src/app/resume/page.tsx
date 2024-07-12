@@ -86,8 +86,8 @@ const ResumePage = () => {
         <div className="w-[100%] md:w-[60%]">
           <p>
             My expertise are in frontend technologies such as HTML5, CSS,
-            BOOTSTRAP, JAVASCRIPT, REACT. I am comfortable with backend
-            technologies such as NODE, EXPRESS, MONGODB, FIREBASE that allows me
+            BOOTSTRAP, JAVASCRIPT, TYPESCRIPT, REACT, NEXTJS, REDUX TOOLKIT, ZUSTAND, REACT QUERY. I am comfortable with backend
+            technologies such as NODE, EXPRESS, MONGODB, FIREBASE, MONGOOSE, PRISMA ORM that allows me
             to work with a backend team efficiently.
             <br />
             <br />I am a solution-focused developer with the ability to develop

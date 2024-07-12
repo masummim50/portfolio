@@ -6,11 +6,12 @@ const CustomTypeWriter = () => {
     return (
         <Typewriter
               options={{
-              strings: ['Web Developer', 'Web Designer', 'React Developer'],
+              strings: ['MERN stack developer'],
               autoStart: true,
-              loop: true,
-              deleteSpeed:25,
-              delay:50
+              loop: false,
+              deleteSpeed:100000000,
+              delay:50,
+
               }}
             />
     );
