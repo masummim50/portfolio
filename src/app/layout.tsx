@@ -10,6 +10,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "MERN stack developer",
   description: "freelance mern stack / full stack developer",
+  verification: {google: "Wc5NCpOS4cY9o2ADxOKc4Ev1d48v-P-G9ztwmEys9I8"}
 };
 
 export default function RootLayout({
