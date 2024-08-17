@@ -13,7 +13,7 @@ export default function Home() {
         <h1 className="text-5xl">Hi,</h1>
         <h1 className="text-5xl">I Am Masum, a</h1>
         <h1 className="text-6xl">
-          <span className="text-cyan-500">
+          <span className="text-cyan-500 text-center">
             <CustomTypeWriter />
           </span>
         </h1>
