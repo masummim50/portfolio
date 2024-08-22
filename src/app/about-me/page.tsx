@@ -1,6 +1,5 @@
 import React from "react";
-import { FaDownload } from "react-icons/fa";
-
+import { FaDownload, FaRegEye } from "react-icons/fa";
 
 const services = [
   {
@@ -50,13 +49,23 @@ const AboutMePage = () => {
             <span className="text-cyan-400">Email: </span>masummim50@gmail.com
           </p>
           <a
-            target="_blank"
-            href="https://drive.google.com/u/0/uc?id=1Iog7pdvkCA3HFp0iDyczZ5wP5zd2G-3q&export=download"
+            href="https://drive.google.com/uc?export=download&id=1wSRTF4I_UwfEwRcA0va1-qWHGJqsromS"
           >
             <button className="border border-cyan-500 hover:bg-cyan-500 transition-all ease-in-out flex items-center gap-1 p-2 rounded-md mt-5">
               Download Resume{" "}
               <span>
                 <FaDownload/>
+              </span>
+            </button>
+          </a>
+          <a
+          target="_blank"
+            href="https://drive.google.com/file/d/1wSRTF4I_UwfEwRcA0va1-qWHGJqsromS/view?usp=sharing"
+          >
+            <button className="border border-orange-500 hover:bg-orange-500 transition-all ease-in-out flex items-center gap-1 p-2 rounded-md mt-5">
+              View Resume{" "}
+              <span>
+                <FaRegEye/>
               </span>
             </button>
           </a>

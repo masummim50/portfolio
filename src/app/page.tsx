@@ -3,6 +3,8 @@ import Image from "next/image";
 
 
 import { FaGithub,FaLinkedin,FaDownload  } from "react-icons/fa";
+import { FaEye } from "react-icons/fa";
+import { FaRegEye } from "react-icons/fa";
 
 
 export default function Home() {
@@ -33,11 +35,19 @@ export default function Home() {
           </button>
         </div>
         <a className="flex items-center bg-cyan-500 rounded-md mt-3 px-3 py-1"
-          target="_blank"
-          href="https://drive.google.com/u/0/uc?id=1Iog7pdvkCA3HFp0iDyczZ5wP5zd2G-3q&export=download"
+          
+          href="https://drive.google.com/uc?export=download&id=1wSRTF4I_UwfEwRcA0va1-qWHGJqsromS"
         >
           <button className="btn brand-btn">
             Download Resume <span className="inline-block"><FaDownload /></span>
+          </button>
+        </a>
+        <a className="flex items-center bg-orange-500 rounded-md mt-3 px-3 py-1"
+          target="_blank"
+          href="https://drive.google.com/file/d/1wSRTF4I_UwfEwRcA0va1-qWHGJqsromS/view?usp=sharing"
+        >
+          <button className="btn brand-btn flex items-center gap-2 ">
+            View Resume <span className="inline-block"><FaRegEye /></span>
           </button>
         </a>
       </div>

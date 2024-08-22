@@ -1,5 +1,5 @@
 import React from "react";
-import { FaDownload, FaHtml5,FaCss3Alt ,FaBootstrap ,FaReact ,FaNodeJs , } from "react-icons/fa";
+import { FaDownload, FaHtml5,FaCss3Alt ,FaBootstrap ,FaReact ,FaNodeJs ,FaRegEye } from "react-icons/fa";
 import { RiTailwindCssFill,RiNextjsFill,RiFirebaseFill   } from "react-icons/ri";
 import { SiMui,SiTypescript ,SiExpress,SiMongodb ,SiPrisma,SiRedux ,SiJsonwebtokens ,SiMongoose    } from "react-icons/si";
 import { IoLogoJavascript } from "react-icons/io5";
@@ -76,7 +76,7 @@ const backendskills = [{
     title:'graphql - apollo client',
     icon:<GrGraphQl/>
   }];
-const familiar = ["REACT NATIVE", "PHP", "WORDPRESS",];
+const familiar = ["React query", "Zustand", "React Native", "php", "wordpress", "python"];
 
 const ResumePage = () => {
   return (
@@ -113,18 +113,28 @@ const ResumePage = () => {
           </div>
           <h4 className="brand-text">Familiar with: </h4>
           {familiar.map((skill, i) => (
-            <span key={i} className="lowskill">
+            <span key={i} className="lowskill mr-3 text-gray-400">
               {skill}
             </span>
           ))}
           <a
-            target="_blank"
-            href="https://drive.google.com/u/0/uc?id=1Iog7pdvkCA3HFp0iDyczZ5wP5zd2G-3q&export=download"
+            href="https://drive.google.com/uc?export=download&id=1wSRTF4I_UwfEwRcA0va1-qWHGJqsromS"
           >
             <button className="flex items-center border border-cyan-500 hover:bg-cyan-500  px-4 py-1 gap-1 rounded-md mt-5">
               Download Resume{" "}
               <span>
                 <FaDownload />
+              </span>
+            </button>
+          </a>
+          <a
+          target="_blank"
+            href="https://drive.google.com/file/d/1wSRTF4I_UwfEwRcA0va1-qWHGJqsromS/view?usp=sharing"
+          >
+            <button className="border border-orange-500 hover:bg-orange-500 transition-all ease-in-out flex items-center gap-1 px-4 py-1 rounded-md mt-2">
+              View Resume{" "}
+              <span>
+                <FaRegEye/>
               </span>
             </button>
           </a>
