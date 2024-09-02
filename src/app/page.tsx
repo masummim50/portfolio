@@ -5,6 +5,11 @@ import Image from "next/image";
 import { FaGithub,FaLinkedin,FaDownload  } from "react-icons/fa";
 import { FaEye } from "react-icons/fa";
 import { FaRegEye } from "react-icons/fa";
+import { motion } from 'framer-motion';
+import GitHubButton from "./GitHubButton";
+import LinkedinButton from "./LinkedInButton";
+import DownloadResumeButton from "./DownloadResumeButton";
+import ViewResumeButton from "./ViewResumeButton";
 
 
 export default function Home() {
@@ -20,36 +25,11 @@ export default function Home() {
           </span>
         </h1>
         <div className="mt-3 flex gap-2">
-          <button className="bg-gray-900  px-3 py-1 rounded-md ">
-            <a className="flex items-center gap-1" target="_blank" href="https://github.com/masummim50">
-              Github <span className="inline-block"><FaGithub/></span>
-            </a>
-          </button>
-          <button className="bg-blue-500  px-3 py-1 rounded-md ">
-            <a className="flex items-center gap-1"
-              target="_blank"
-              href="https://www.linkedin.com/in/masum-billah-65709a146/"
-            >
-              Linkedin <span className="inline-block"><FaLinkedin/></span>
-            </a>
-          </button>
+          <GitHubButton/>
+          <LinkedinButton/>
         </div>
-        <a className="flex items-center bg-cyan-500 rounded-md mt-3 px-3 py-1"
-          
-          href="https://drive.google.com/uc?export=download&id=1wSRTF4I_UwfEwRcA0va1-qWHGJqsromS"
-        >
-          <button className="btn brand-btn">
-            Download Resume <span className="inline-block"><FaDownload /></span>
-          </button>
-        </a>
-        <a className="flex items-center bg-orange-500 rounded-md mt-3 px-3 py-1"
-          target="_blank"
-          href="https://drive.google.com/file/d/1wSRTF4I_UwfEwRcA0va1-qWHGJqsromS/view?usp=sharing"
-        >
-          <button className="btn brand-btn flex items-center gap-2 ">
-            View Resume <span className="inline-block"><FaRegEye /></span>
-          </button>
-        </a>
+        <DownloadResumeButton/>
+        <ViewResumeButton/>
       </div>
       
     </div>

@@ -1,10 +1,15 @@
 import React from "react";
+import FrontEndProjectCard from "./FrontEndProjectCard";
+import Technologies from "./FrTechnologies";
 
 const projects = [
   {
     title: "Project Management System",
     live: "https://capable-croissant-486a0f.netlify.app",
-    links: { frontEnd: "https://github.com/masummim50/project-management-frontend", backEnd: "https://github.com/masummim50/project-management-backend" },
+    links: {
+      frontEnd: "https://github.com/masummim50/project-management-frontend",
+      backEnd: "https://github.com/masummim50/project-management-backend",
+    },
     technologies: {
       frontEnd: [
         "react",
@@ -45,7 +50,10 @@ const projects = [
   {
     title: "Multi-vendor e-commerce Website",
     live: "https://best-buy-nu.vercel.app",
-    links: { frontEnd: "https://github.com/masummim50/ecommerce-nextjs14-approuter", backEnd: "https://github.com/masummim50/ecommerce-backend-prisma" },
+    links: {
+      frontEnd: "https://github.com/masummim50/ecommerce-nextjs14-approuter",
+      backEnd: "https://github.com/masummim50/ecommerce-backend-prisma",
+    },
     technologies: {
       frontEnd: [
         "nextjs (app router)",
@@ -85,19 +93,19 @@ const projects = [
 const fontEndProjects = [
   {
     name: "Gaming Dashboard",
-    tech:'React',
+    tech: "React",
     liveLink: "https://elaborate-piroshki-f91fe1.netlify.app/",
     code: "https://github.com/masummim50/dashboard-gaming",
   },
   {
     name: "Project Management Dashboard",
-    tech:'React',
+    tech: "React",
     liveLink: "https://wondrous-pasca-292302.netlify.app/",
     code: "https://github.com/masummim50/dashboard-project-management-frontend-only",
   },
   {
     name: "Travel landing Page",
-    tech:'Nextjs',
+    tech: "Nextjs",
     liveLink: "https://landing-page-voyage.vercel.app/",
     code: "https://github.com/masummim50/landing-page-travel-life",
   },
@@ -111,30 +119,11 @@ const ProjectsPage = () => {
         <div className="text-center text-sky-600">FrontEnd Projects</div>
         <div className="flex flex-wrap gap-2 justify-center">
           {fontEndProjects.map((project, i) => (
-            <div
-              key={i}
-              className="mb-5 hover:shadow-[0px_1px_0px_white] shadow-[0px_5px_5px_-5px_white] transition-all rounded-md pb-5 backdrop-blur-sm bg-gray-600/20 p-3"
-            >
-              <div className="flex items-center flex-col gap-2">
-                <h2>{project.name} <span className="text-sm text-sky-400">({project.tech})</span></h2>
-                <a
-                  href={project.liveLink}
-                  target="_blank"
-                  className="text-sky-400 cursor-pointer rounded-md shadow-[inset_1px_1px_3px_black,inset_-1px_-1px_3px_#bae6fd] px-6 py-2"
-                >
-                  Live Site
-                </a>
-              </div>
-              <div className="flex justify-center my-2 underline w-full">
-                <a href={project.code} target="_blank">
-                  Code
-                </a>
-              </div>
-            </div>
+            <FrontEndProjectCard key={i} project={project}/>
           ))}
         </div>
       </div>
-      <div className="text-center text-sky-600">Full Stack Projects</div>
+      <div  className="text-center text-sky-400 text-xl font-semibold">Full Stack Projects</div>
       {projects.map((project, i) => (
         <div
           key={i}
@@ -162,35 +151,19 @@ const ProjectsPage = () => {
               </a>
             )}
           </div>
-          <div>
+          <div className="flex flex-col gap-2">
             <h2>Technologies: </h2>
             {project.technologies.frontEnd.length > 0 && (
-              <div className="flex flex-wrap gap-2">
-                {project.technologies.frontEnd.map((tech, i) => (
-                  <span
-                    key={i}
-                    className=" border px-2 border-cyan-800 rounded-md  font-extralight"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
+              <Technologies techs={project.technologies.frontEnd}/>
+              
             )}
             {project.technologies.backEnd.length > 0 && (
-              <div className="flex flex-wrap gap-2 mt-2">
-                {project.technologies.backEnd.map((tech, i) => (
-                  <span
-                    key={i}
-                    className=" border px-2 border-cyan-300 rounded-md  font-extralight"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
+            <Technologies techs={project.technologies.backEnd} stagger={0.3} delay={0.2}/>
+              
             )}
           </div>
           {project.importantInfo !== "" && (
-            <h2 className="text-cyan-400 my-3">{project.importantInfo}</h2>
+            <h2 className="text-sky-400 my-3 animate-pulse">{project.importantInfo}</h2>
           )}
           <div>
             <h2>Features: </h2>

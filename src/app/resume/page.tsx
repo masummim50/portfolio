@@ -4,78 +4,11 @@ import { RiTailwindCssFill,RiNextjsFill,RiFirebaseFill   } from "react-icons/ri"
 import { SiMui,SiTypescript ,SiExpress,SiMongodb ,SiPrisma,SiRedux ,SiJsonwebtokens ,SiMongoose    } from "react-icons/si";
 import { IoLogoJavascript } from "react-icons/io5";
 import { GrGraphQl } from "react-icons/gr";
+import SkillSets from "./SkillSets";
 
 
-const frontendskills = [
-  {
-    title:'html5',
-    icon:<FaHtml5/>
-  },
-  {
-    title:'css3',
-    icon:<FaCss3Alt/>
-  },
-  {
-    title:'bootstrap',
-    icon:<FaBootstrap/>
-  },
-  {
-    title:'tailwindcss',
-    icon:<RiTailwindCssFill/>
-  },
-  {
-    title:'react',
-    icon:<FaReact/>
-  },
-  {
-    title:'nextjs',
-    icon:<RiNextjsFill/>
-  },
-  {
-    title:'redux toolkit',
-    icon:<SiRedux/>
-  },
-  {
-    title:'javascript',
-    icon:<IoLogoJavascript/>
-  },
-  {
-    title:'typescript',
-    icon:<SiTypescript/>
-  },{
-    title:'firebase authentication',
-    icon:<RiFirebaseFill/>
-  },
-];
-// const backendskills = ["NODE.JS", "EXPRESS", "MONGODB", "FIREBASE", "HEROKU"];
-const backendskills = [{
-    title:'nodejs',
-    icon:<FaNodeJs/>
-  },
-  {
-    title:'expressjs',
-    icon:<SiExpress/>
-  },
-  {
-    title:'mongodb',
-    icon:<SiMongodb/>
-  },
-  {
-    title:'mongoose',
-    icon:<SiMongoose />
-  },
-  {
-    title:'prisma ORM',
-    icon:<SiPrisma/>
-  },
-  {
-    title:'jwt authentication',
-    icon:<SiJsonwebtokens/>
-  },
-  {
-    title:'graphql - apollo client',
-    icon:<GrGraphQl/>
-  }];
+
+
 const familiar = ["React query", "Zustand", "React Native", "php", "wordpress", "python"];
 
 const ResumePage = () => {
@@ -97,20 +30,9 @@ const ResumePage = () => {
         </div>
         <div className="w-[100%] md:w-[40%]">
           <h3 className="underline text-2xl text-cyan-400">My Skillset:</h3>
-          <div className="mb-2 flex flex-wrap gap-1">
-            {frontendskills.map((skill, i) => (
-              <span key={i} className="flex gap-1 bg-cyan-800 rounded-md items-center px-2 text-lg font-extralight">
-                {skill.title} {skill.icon}
-              </span>
-            ))}
-          </div>
-          <div className="mb-2 flex flex-wrap gap-1 mt-5">
-            {backendskills.map((skill, i) => (
-              <span key={i} className="flex gap-1 bg-cyan-800 rounded-md items-center px-2 text-lg font-extralight">
-                {skill.title} {skill.icon}
-              </span>
-            ))}
-          </div>
+
+          <SkillSets/>
+
           <h4 className="brand-text">Familiar with: </h4>
           {familiar.map((skill, i) => (
             <span key={i} className="lowskill mr-3 text-gray-400">
