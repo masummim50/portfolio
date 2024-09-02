@@ -1,6 +1,7 @@
 import React from "react";
 import FrontEndProjectCard from "./FrontEndProjectCard";
 import Technologies from "./FrTechnologies";
+import SystemVideo from "./SystemVideo";
 
 const projects = [
   {
@@ -119,11 +120,13 @@ const ProjectsPage = () => {
         <div className="text-center text-sky-600">FrontEnd Projects</div>
         <div className="flex flex-wrap gap-2 justify-center">
           {fontEndProjects.map((project, i) => (
-            <FrontEndProjectCard key={i} project={project}/>
+            <FrontEndProjectCard key={i} project={project} />
           ))}
         </div>
       </div>
-      <div  className="text-center text-sky-400 text-xl font-semibold">Full Stack Projects</div>
+      <div className="text-center text-sky-400 text-xl font-semibold">
+        Full Stack Projects
+      </div>
       {projects.map((project, i) => (
         <div
           key={i}
@@ -154,26 +157,36 @@ const ProjectsPage = () => {
           <div className="flex flex-col gap-2">
             <h2>Technologies: </h2>
             {project.technologies.frontEnd.length > 0 && (
-              <Technologies techs={project.technologies.frontEnd}/>
-              
+              <Technologies techs={project.technologies.frontEnd} />
             )}
             {project.technologies.backEnd.length > 0 && (
-            <Technologies techs={project.technologies.backEnd} stagger={0.3} delay={0.2}/>
-              
+              <Technologies
+                techs={project.technologies.backEnd}
+                stagger={0.3}
+                delay={0.2}
+              />
             )}
           </div>
           {project.importantInfo !== "" && (
-            <h2 className="text-sky-400 my-3 animate-pulse">{project.importantInfo}</h2>
+            <h2 className="text-sky-400 my-3 animate-pulse">
+              {project.importantInfo}
+            </h2>
           )}
           <div>
             <h2>Features: </h2>
-            <ul role="list" className="marker:text-cyan-400 list-disc pl-5">
-              {project.features.map((feature, i) => (
-                <li key={i} className="font-extralight">
-                  {feature}
-                </li>
-              ))}
-            </ul>
+            <div className="flex flex-col lg:flex-row">
+              <ul role="list" className="marker:text-cyan-400 list-disc pl-5 w-full lg:w-[55%]">
+                {project.features.map((feature, i) => (
+                  <li key={i} className="font-extralight">
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+              {
+                i === 0 && 
+              <SystemVideo />
+              }
+            </div>
           </div>
         </div>
       ))}
