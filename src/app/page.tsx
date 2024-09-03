@@ -29,7 +29,7 @@ export default function Home() {
               <CustomTypeWriter />
             </span>
           </h1>
-          <div className="mt-3 flex gap-2">
+          <div className="mt-3 flex gap-2 overflow-x-hidden w-[calc(100vw-45px)] justify-center">
             <GitHubButton />
             <LinkedinButton />
           </div>

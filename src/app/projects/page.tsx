@@ -175,17 +175,17 @@ const ProjectsPage = () => {
           <div>
             <h2>Features: </h2>
             <div className="flex flex-col lg:flex-row">
-              <ul role="list" className="marker:text-cyan-400 list-disc pl-5 w-full lg:w-[55%]">
+              <ul
+                role="list"
+                className="marker:text-cyan-400 list-disc pl-5 w-full lg:w-[55%]"
+              >
                 {project.features.map((feature, i) => (
                   <li key={i} className="font-extralight">
                     {feature}
                   </li>
                 ))}
               </ul>
-              {
-                i === 0 && 
-              <SystemVideo />
-              }
+              {i === 0 && <SystemVideo />}
             </div>
           </div>
         </div>

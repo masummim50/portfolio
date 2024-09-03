@@ -6,9 +6,9 @@ import { FaLinkedin } from "react-icons/fa";
 const LinkedinButton = () => {
   return (
     <motion.button
-      initial={{ x: 1000, opacity: 0 }}
+      initial={{ x: 300, opacity: 0 }}
       animate={{ x: 0, opacity: 1}}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 1 }}
       className="bg-blue-500  px-3 py-1 rounded-md "
     >
       <a
