@@ -91,39 +91,9 @@ const projects = [
   },
 ];
 
-const fontEndProjects = [
-  {
-    name: "Gaming Dashboard",
-    tech: "React",
-    liveLink: "https://elaborate-piroshki-f91fe1.netlify.app/",
-    code: "https://github.com/masummim50/dashboard-gaming",
-  },
-  {
-    name: "Project Management Dashboard",
-    tech: "React",
-    liveLink: "https://wondrous-pasca-292302.netlify.app/",
-    code: "https://github.com/masummim50/dashboard-project-management-frontend-only",
-  },
-  {
-    name: "Travel landing Page",
-    tech: "Nextjs",
-    liveLink: "https://landing-page-voyage.vercel.app/",
-    code: "https://github.com/masummim50/landing-page-travel-life",
-  },
-];
-
 const ProjectsPage = () => {
   return (
     <div className="pb-20">
-      <h2 className="text-3xl py-3">Projects:</h2>
-      <div>
-        <div className="text-center text-sky-600">FrontEnd Projects</div>
-        <div className="flex flex-wrap gap-2 justify-center">
-          {fontEndProjects.map((project, i) => (
-            <FrontEndProjectCard key={i} project={project} />
-          ))}
-        </div>
-      </div>
       <div className="text-center text-sky-400 text-xl font-semibold">
         Full Stack Projects
       </div>
