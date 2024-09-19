@@ -89,6 +89,43 @@ const projects = [
       "light and dark mode",
     ],
   },
+  {
+    title: "Blogging application",
+    live: "https://blog-frontend-orpin-eta.vercel.app/",
+    links: {
+      frontEnd: "https://github.com/masummim50/blog-frontend",
+      backEnd: "https://github.com/masummim50/blog-backend",
+    },
+    technologies: {
+      frontEnd: [
+        "react",
+        "typescript",
+        "tailwindcss + framer motion",
+        "react query",
+        "zustand"
+      ],
+      backEnd: [
+        "nodejs",
+        "expressjs",
+        "typescript",
+        "mongoose",
+        "jwt-authentication",
+      ],
+    },
+    importantInfo:
+      "Easy to test, No typing Required. Testing accounts are provided in the login page",
+    features: [
+      "homepage featuring posts with newest first, post card with details, like and share functionality",
+      "create post with title description thumbnail and tags, option to select community/group to post in",
+      "post details, comments like functionality",
+      "user sign up and login",
+      "view posts by tags",
+      "create community, join and create post in them",
+      "upload image while creating post, upload avatar and cover image, and feature image and cover image for communities. (imgbb api used)",
+      "light and dark mode",
+      "view own profile along with other users profile"
+    ],
+  },
 ];
 
 const ProjectsPage = () => {
