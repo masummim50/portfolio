@@ -27,6 +27,9 @@ import {
 import { IoLogoJavascript } from "react-icons/io5";
 import { GrGraphQl } from "react-icons/gr";
 import { motion } from "framer-motion";
+import { SiReactquery } from "react-icons/si";
+import { TbLetterZ } from "react-icons/tb";
+
 const frontendskills = [
   {
     title: "html5",
@@ -67,6 +70,14 @@ const frontendskills = [
   {
     title: "firebase authentication",
     icon: <RiFirebaseFill />,
+  },
+  {
+    title: "React Query",
+    icon: <SiReactquery />,
+  },
+  {
+    title: "Zustand",
+    icon: <TbLetterZ />,
   },
 ];
 // const backendskills = ["NODE.JS", "EXPRESS", "MONGODB", "FIREBASE", "HEROKU"];

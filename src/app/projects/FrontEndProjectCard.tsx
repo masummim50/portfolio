@@ -1,6 +1,6 @@
 "use client"
 import React from "react";
-import { motion } from 'framer-motion';
+
 
 const FrontEndProjectCard = ({
   project,
@@ -8,7 +8,7 @@ const FrontEndProjectCard = ({
   project: { name: string; tech: string; liveLink: string; code: string };
 }) => {
   return (
-    <motion.div initial={{opacity: 0, scale:0}} animate={{opacity: 1, scale:1}} className="mb-5 hover:shadow-[0px_1px_0px_white] shadow-[0px_5px_5px_-5px_white] transition-all rounded-md pb-5 backdrop-blur-sm bg-gray-600/20 p-3">
+    <div  className="mb-5 hover:shadow-[0px_1px_0px_white] shadow-[0px_5px_5px_-5px_white] transition-all rounded-md pb-5 backdrop-blur-sm bg-gray-600/20 p-3">
       <div className="flex items-center flex-col gap-2">
         <h2>
           {project.name}{" "}
@@ -27,7 +27,7 @@ const FrontEndProjectCard = ({
           Code
         </a>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

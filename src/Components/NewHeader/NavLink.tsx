@@ -10,10 +10,24 @@ const NavLink = ({
 }) => {
   const pathname = usePathname();
   return (
+    // <Link
+    //   scroll={false}
+    //   className={`px-2 py-1 text-[10px] sm:text-base text-medium ${
+    //     pathname === link.src ? "bg-cyan-500" : ""
+    //   }  rounded-md hover:border-cyan-500  border border-transparent  hover:text-white text-white flex items-center gap-1`}
+    //   href={link.src}
+    // >
+    //   {link.icon}
+    //   {link.title}
+    // </Link>
     <Link
       scroll={false}
       className={`px-2 py-1 text-[10px] sm:text-base text-medium ${
-        pathname === link.src ? "bg-cyan-500" : ""
+        pathname === "/projects/frontend" && link.src === "/projects"
+          ? "bg-cyan-500"
+          : pathname === link.src
+          ? "bg-cyan-500"
+          : ""
       }  rounded-md hover:border-cyan-500  border border-transparent  hover:text-white text-white flex items-center gap-1`}
       href={link.src}
     >

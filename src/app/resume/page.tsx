@@ -9,7 +9,7 @@ import SkillSets from "./SkillSets";
 
 
 
-const familiar = ["React query", "Zustand", "React Native", "php", "wordpress", "python"];
+const familiar = [ "React Native", "php", "wordpress", "python"];
 
 const ResumePage = () => {
   return (
