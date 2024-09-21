@@ -2,13 +2,15 @@ import React from "react";
 import FrontEndProjectCard from "./FrontEndProjectCard";
 import Technologies from "./FrTechnologies";
 import SystemVideo from "./SystemVideo";
+import BottomButton from "./BottomButton";
 
 const projects = [
   {
+    id:'pm',
     title: "Project Management System",
-    live: "https://capable-croissant-486a0f.netlify.app",
+    live: "https://project-management-light.vercel.app/",
     links: {
-      frontEnd: "https://github.com/masummim50/project-management-frontend",
+      frontEnd: "https://github.com/masummim50/project-management-frontend-light",
       backEnd: "https://github.com/masummim50/project-management-backend",
     },
     technologies: {
@@ -49,6 +51,7 @@ const projects = [
     ],
   },
   {
+    id:'ec',
     title: "Multi-vendor e-commerce Website",
     live: "https://best-buy-nu.vercel.app",
     links: {
@@ -90,6 +93,7 @@ const projects = [
     ],
   },
   {
+    id:'blog',
     title: "Blogging application",
     live: "https://blog-frontend-orpin-eta.vercel.app/",
     links: {
@@ -131,20 +135,32 @@ const projects = [
 const ProjectsPage = () => {
   return (
     <div className="pb-20">
+      <BottomButton/>
       <div className="text-center text-sky-400 text-xl font-semibold">
         Full Stack Projects
       </div>
+      {/* <div className="flex items-center">
+        <a href="#ec">MultiVendor e-commerce(nextjs)</a>
+      </div> */}
       {projects.map((project, i) => (
         <div
+        id={project.id}
           key={i}
           className="mb-5 border-b-2 rounded-md pb-5 backdrop-blur-sm -z-20 bg-gray-600/20 p-3"
         >
           <div className="flex justify-between">
-            <h2>{project.title}</h2>
-            <a
+            <h2 className="text-xl text-sky-500">{project.title}</h2>
+            {/* <a
               href={project.live}
               target="_blank"
               className="text-sky-400 rounded-md  px-4 py-1 shadow-[inset_1px_1px_3px_black,inset_-1px_-1px_3px_#bae6fd]"
+            >
+              Live Site
+            </a> */}
+            <a
+              href={project.live}
+              target="_blank"
+              className="bg-orange-500 rounded-md  px-4 py-1 hover:bg-orange-600 transition-all"
             >
               Live Site
             </a>
@@ -175,7 +191,7 @@ const ProjectsPage = () => {
             )}
           </div>
           {project.importantInfo !== "" && (
-            <h2 className="text-sky-400 my-3 animate-pulse">
+            <h2 className="text-orange-500 my-3">
               {project.importantInfo}
             </h2>
           )}
